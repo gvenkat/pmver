@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use feature 'say';
+
+die( "No arguments given" ) unless length @ARGV; 
+
+
+for my $i ( @ARGV ) {
+  say "$i:";
+
+  eval( "use $i;" );
+
+  warn $@ if $@;
+
+  eval 'say $' . "$i" . "::VERSION";
+}
+

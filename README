@@ -1,0 +1,7 @@
+INSTALLATION:
+  place it in your ~/bin directory
+  add ~/bin to your PATH
+
+USAGE:
+  pmver Mojolicious
+
